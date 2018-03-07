@@ -28,6 +28,7 @@ public partial class Admin_editquestion : System.Web.UI.Page
 
     string qtype = "";
     string questionstr = "";
+    string categorystr = "";
     string answerstr = "";
     string textoptionstr = "";
     Byte[] bytes;
@@ -75,7 +76,7 @@ public partial class Admin_editquestion : System.Web.UI.Page
     protected void bindquestion()
     {
         SqlDataReader dreader;
-        SqlCommand getquestioncmd = new SqlCommand("select id, quizid, type, title from " + quizquestionstable + " where id=@questionid");
+        SqlCommand getquestioncmd = new SqlCommand("select id, quizid, type, title, category from " + quizquestionstable + " where id=@questionid");
         getquestioncmd.Parameters.AddWithValue("questionid", qId);
 
         db getquestion = new db();
@@ -113,6 +114,8 @@ public partial class Admin_editquestion : System.Web.UI.Page
                     UploadButton3.Visible = false;
 
                     populateoptions(qId);
+                    categorystr = dreader["category"].ToString();
+                    ddlCategorias1.Text = categorystr;
 
                     bytes = showimage();
 
@@ -135,9 +138,10 @@ public partial class Admin_editquestion : System.Web.UI.Page
                     UploadButton2.Visible = false;
 
                     questionstr = dreader["title"].ToString();
-
                     txtsingleoption.Text = questionstr;
                     txtsingleoptionanswer.Text = populatesingleoptions(qId);
+                    categorystr = dreader["category"].ToString();
+                    ddlCategorias1.Text = categorystr;
 
                     bytes = showimage();
                     if (bytes != null)
@@ -545,7 +549,7 @@ public partial class Admin_editquestion : System.Web.UI.Page
             {
                 category = ddlCategorias1.SelectedItem.Text.Trim();
 
-                SqlCommand updateoptioncmd = new SqlCommand("update " + quizquestionstable + " set category=@category, lastupdated=@lastupdated where questionid=@questionid");
+                SqlCommand updateoptioncmd = new SqlCommand("update " + quizquestionstable + " set category=@category, lastupdated=@lastupdated where id=@questionid");
                 updateoptioncmd.Parameters.AddWithValue("questionid", qId);
                 updateoptioncmd.Parameters.AddWithValue("lastupdated", updatedate);
                 updateoptioncmd.Parameters.AddWithValue("category", category);
