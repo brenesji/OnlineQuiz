@@ -19,11 +19,11 @@ public partial class Admin_viewquiz : System.Web.UI.Page
         }
 
         //set the home link
-        HyperLink homelink = (HyperLink)Master.FindControl("homelnk");
-        if (homelink != null)
-        {
-            homelink.NavigateUrl = "viewquiz";
-        }
+       // HyperLink homelink = (HyperLink)Master.FindControl("homelnk");
+        //if (homelink != null)
+        //{
+         //  homelink.NavigateUrl = "viewquiz";
+        //}
     }
 
     //get the recent quiz

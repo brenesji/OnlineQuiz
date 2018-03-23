@@ -5,10 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Admin_Admin : System.Web.UI.MasterPage
-{
-    protected void Page_Load(object sender, EventArgs e)
-    {
 
+    public partial class HomePage : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
     }
-}

@@ -23,21 +23,24 @@ public partial class Admin_setquestions : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         updatedate = DateTime.Now;
+        HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        HttpContext.Current.Response.AddHeader("Pragma", "no-cache");
+        HttpContext.Current.Response.AddHeader("Expires", "0");
 
         if (!Page.IsPostBack)
         {
             //get the query string value
             if (Page.Request["q"] == null)
             {
-                questionsdiv.InnerHtml = "<br /><span style='color:#FF0000; font-size:15px;'>Please select a quiz event first and try again.</span>";
+              questionsdiv.InnerHtml = "<br /><span style='color:#FF0000; font-size:15px;'>Please select a quiz event first and try again.</span>";
             }
             else
             {
-                qstring = Page.Request["q"].ToString();
-                quizId = Convert.ToInt32(qstring);
-
+             qstring = Page.Request["q"].ToString();
+            quizId = Convert.ToInt32(qstring);
+            //quizId = 1;
                 //strore the quiz id in hidden field
-                quizfield.Value = qstring;
+          quizfield.Value = qstring;
                 bindquestions();
             }
         }
@@ -60,7 +63,7 @@ public partial class Admin_setquestions : System.Web.UI.Page
     protected void bindquestions()
     {
         DataTable dTable = new DataTable();
-        SqlCommand getquestions = new SqlCommand("select id, title, type from " + quizquestionstable + " where quizid=@quizid order by questionorder ASC");
+        SqlCommand getquestions = new SqlCommand("select id, title, type from " + quizquestionstable + " order by questionorder ASC");
         getquestions.Parameters.AddWithValue("quizid", quizId);
 
         db getquestionslist = new db();
@@ -92,6 +95,7 @@ public partial class Admin_setquestions : System.Web.UI.Page
         if (e.CommandName == "edit")
         {
             Response.Redirect("editquestion?q=" + arrKeys[0], false);
+
         }
         else if (e.CommandName == "delete")
         {

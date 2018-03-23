@@ -1,9 +1,30 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.master" AutoEventWireup="true" CodeFile="editquiz.aspx.cs" Inherits="Admin_editquiz" %>
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeFile="editquiz.aspx.cs" Inherits="Admin_editquiz" %>
 <%@ Register Assembly="FredCK.CKEditor" Namespace="FredCK.CKEditor" TagPrefix="FredCK" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/base/jquery-ui.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Universidad Hispanoamericana</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../Styles/grayscale.min.css" rel="stylesheet">
+    </head>
+<body>
+      <form runat="server">
+ 
     <script src="../Scripts/jquery-1.8.1.min.js" type="text/javascript"></script>
     <script src="../Scripts/jquery-ui.min.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -18,8 +39,7 @@
             display: none;
         }
     </style>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
     <asp:HiddenField ID="quizfield" runat="server" />
     <div id="editquiz" runat="server">
         <br />
@@ -69,5 +89,18 @@
         <asp:Button ID="submitquiz" runat="server" Text="Submit" Height="25px" Width="75px" OnClick="submitquiz_click" ValidationGroup="submitvalidation" />     
     </div>
     <br /><asp:Label ID="lblalert" runat="server" Visible="false" ForeColor="Red" /><br />
-</asp:Content>
+    <footer>
+                <div class="content-wrapper">
+                    <div class="float-left">
+                        <p>
+                            &copy; <%: DateTime.Now.Year %> - All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+
+          </form>
+    </body>
+</html>
 
