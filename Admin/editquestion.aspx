@@ -39,22 +39,22 @@
         <br />
              <asp:Label runat="server" id="StatusLabel3" />
         <br />
-        <asp:FileUpload id="FileUploadControl3" runat="server"/>
-        <asp:Button runat="server" id="UploadButton3" text="Upload" onclick="UploadButton_Click3" />
+        <asp:FileUpload id="FileUploadControl3" runat="server" class="btn btn-default btn-lg"/>
+        <asp:Button runat="server" id="UploadButton3" text="Upload" onclick="UploadButton_Click3" class="btn btn-default btn-lg"/>
         <br />
             <br />
             <br />
-            <b>Pregunta</b><br /><asp:TextBox ID="txtmultipleoption" runat="server" Height="23px" width="400px" TextMode="MultiLine"/>&nbsp;<asp:RequiredFieldValidator ID="multipleoptionvalidator" runat="server" ControlToValidate="txtmultipleoption" Display="Dynamic" ErrorMessage="please enter Question" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" />
+            <b>Pregunta</b><br /><asp:TextBox ID="txtmultipleoption" runat="server" class="btn btn-default btn-lg" Height="50px" Width="600px" TextMode="MultiLine"/>&nbsp;<asp:RequiredFieldValidator ID="multipleoptionvalidator" runat="server" ControlToValidate="txtmultipleoption" Display="Dynamic" ErrorMessage="please enter Question" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" />
             <br />
               <br />
               <br />
-            <b>Opcion 1</b>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtmultipleoption1" runat="server" Height="23px" width="200px" OnTextChanged="txtmultipleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtmultipleoption1" Display="Dynamic" ErrorMessage="Por favor ingrese la opcion 1" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" /><asp:HiddenField ID="hfoption1" runat="server" Visible="false" /><br /><br />
-            <b>Opcion 2</b>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtmultipleoption2" runat="server" Height="23px" width="200px" OnTextChanged="txtmultipleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtmultipleoption2" Display="Dynamic" ErrorMessage="Por favor ingrese la opcion 2" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" /><asp:HiddenField ID="hfoption2" runat="server" Visible="false" /><br /><br />
-            <b>Opcion 3</b>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtmultipleoption3" runat="server" Height="23px" width="200px" OnTextChanged="txtmultipleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtmultipleoption3" Display="Dynamic" ErrorMessage="Por favor ingrese la opcion 3" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" /><asp:HiddenField ID="hfoption3" runat="server" Visible="false" /><br /><br />
-            <b>Opcion 4</b>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtmultipleoption4" runat="server" Height="23px" width="200px" OnTextChanged="txtmultipleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtmultipleoption4" Display="Dynamic" ErrorMessage="Por favor ingrese la opcion 4" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" /><asp:HiddenField ID="hfoption4" runat="server" Visible="false" /><br /><br />
-            <b>Opcion 5</b>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtmultipleoption5" runat="server" Height="23px" width="200px" OnTextChanged="txtmultipleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtmultipleoption5" Display="Dynamic" ErrorMessage="Por favor ingrese la opcion 5" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" /><asp:HiddenField ID="hfoption5" runat="server" Visible="false" /><br /><br />
+            <b>Opcion 1</b>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtmultipleoption1" runat="server" class="btn btn-default btn-lg" Height="50px" OnTextChanged="txtmultipleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtmultipleoption1" Display="Dynamic" ErrorMessage="Por favor ingrese la opcion 1" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" /><asp:HiddenField ID="hfoption1" runat="server" Visible="false" /><br /><br />
+            <b>Opcion 2</b>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtmultipleoption2" runat="server" class="btn btn-default btn-lg" Height="50px" OnTextChanged="txtmultipleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtmultipleoption2" Display="Dynamic" ErrorMessage="Por favor ingrese la opcion 2" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" /><asp:HiddenField ID="hfoption2" runat="server" Visible="false" /><br /><br />
+            <b>Opcion 3</b>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtmultipleoption3" runat="server" class="btn btn-default btn-lg" Height="50px" OnTextChanged="txtmultipleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtmultipleoption3" Display="Dynamic" ErrorMessage="Por favor ingrese la opcion 3" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" /><asp:HiddenField ID="hfoption3" runat="server" Visible="false" /><br /><br />
+            <b>Opcion 4</b>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtmultipleoption4" runat="server" class="btn btn-default btn-lg" Height="50px" OnTextChanged="txtmultipleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtmultipleoption4" Display="Dynamic" ErrorMessage="Por favor ingrese la opcion 4" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" /><asp:HiddenField ID="hfoption4" runat="server" Visible="false" /><br /><br />
+            <b>Opcion 5</b>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtmultipleoption5" runat="server" class="btn btn-default btn-lg" Height="50px" OnTextChanged="txtmultipleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtmultipleoption5" Display="Dynamic" ErrorMessage="Por favor ingrese la opcion 5" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" /><asp:HiddenField ID="hfoption5" runat="server" Visible="false" /><br /><br />
             <b>Categoria</b><br />
-            <asp:DropDownList id ="ddlCategorias1" runat ="server" Height="23px" OnTextChanged="txtmultipleoptioncategory_TextChanged" AutoPostBack="true">
+            <asp:DropDownList id ="ddlCategorias1" runat ="server" class="btn btn-default btn-lg" OnTextChanged="txtmultipleoptioncategory_TextChanged" AutoPostBack="true">
                 <asp:ListItem></asp:ListItem>
                 <asp:ListItem>Cmpron. verbal</asp:ListItem>
                 <asp:ListItem>Razmto. de imágenes</asp:ListItem>
@@ -67,7 +67,7 @@
             <asp:Label ID="lblanswer" runat="server" Font-Bold="true" ForeColor="Red" Visible="false">Respuesta</asp:Label>&nbsp;&nbsp;
             <asp:DropDownList ID="ddlmultipleanswer" runat="server" AutoPostBack="false" DataTextField="questionoption" DataValueField="id">                
             </asp:DropDownList><br /><br /><br />
-            <asp:Button ID="multipleoptionsubmit" runat="server" OnClick="multipleoptionsubmit_Click" Text="Submit" Height="23px" Width="100px" ValidationGroup="multipleoptionvalidation" />
+            <asp:Button ID="multipleoptionsubmit" runat="server" OnClick="multipleoptionsubmit_Click" Text="Submit" class="btn btn-default btn-lg" ValidationGroup="multipleoptionvalidation" />
         </div>
 
 
@@ -77,29 +77,29 @@
         <br />
         <asp:Label runat="server" id="StatusLabel2" />
         <br />
-        <asp:FileUpload id="FileUploadControl2" runat="server"/>
-        <asp:Button runat="server" id="UploadButton2" text="Upload" onclick="UploadButton_Click2" />
+        <asp:FileUpload id="FileUploadControl2" runat="server" class="btn btn-default btn-lg"/>
+        <asp:Button runat="server" id="UploadButton2" text="Upload" onclick="UploadButton_Click2" class="btn btn-default btn-lg"/>
         <br />
             <br />
             <br />
-            <b>Question</b><br /><asp:TextBox ID="txtsingleoption" runat="server" Height="23px" width="400px" TextMode="MultiLine"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtsingleoption" Display="Dynamic" ErrorMessage="Por favor ingrese la pregunta" SetFocusOnError="true" ForeColor="Red" ValidationGroup="singleoptionvalidation" />
+            <b>Question</b><br /><asp:TextBox ID="txtsingleoption" runat="server" class="btn btn-default btn-lg" Height="50px" Width="600px" TextMode="MultiLine"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtsingleoption" Display="Dynamic" ErrorMessage="Por favor ingrese la pregunta" SetFocusOnError="true" ForeColor="Red" ValidationGroup="singleoptionvalidation" />
             <b>
             <br />
             <br />
             <br />
-            Answer</b><br /><asp:TextBox ID="txtsingleoptionanswer" runat="server" Text="" Height="23px" width="200px" OnTextChanged="txtsingleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtsingleoptionanswer" Display="Dynamic" ErrorMessage="Por favor ingrese la respuesta" SetFocusOnError="true" ForeColor="Red" ValidationGroup="singleoptionvalidation" /><br />
+            Answer</b><br /><asp:TextBox ID="txtsingleoptionanswer" runat="server" class="btn btn-default btn-lg" Height="50px" OnTextChanged="txtsingleoption_TextChanged" AutoPostBack="true"/>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtsingleoptionanswer" Display="Dynamic" ErrorMessage="Por favor ingrese la respuesta" SetFocusOnError="true" ForeColor="Red" ValidationGroup="singleoptionvalidation" /><br />
             <br />
             <br />
             <b>Category</b><br />
-            <asp:DropDownList id ="ddlCategorias2" runat ="server" Height="23px" OnTextChanged="txtmultipleoptioncategory_TextChanged" AutoPostBack="true">
+            <asp:DropDownList id ="ddlCategorias2" runat ="server" class="btn btn-default btn-lg" OnTextChanged="txtmultipleoptioncategory_TextChanged" AutoPostBack="true">
                 <asp:ListItem></asp:ListItem>
                 <asp:ListItem>Cmpron. verbal</asp:ListItem>
                 <asp:ListItem>Razmto. de imágenes</asp:ListItem>
                 <asp:ListItem>Razmto. verbal</asp:ListItem>
                 <asp:ListItem>Razmto. de figuras</asp:ListItem>
                 <asp:ListItem>Razmto. cuantitativo</asp:ListItem>
-            </asp:DropDownList>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="ddlCategorias2" Display="Dynamic" ErrorMessage="Por favor ingrese la categoria" SetFocusOnError="true" ForeColor="Red" ValidationGroup="multipleoptionvalidation" /><br /><br /><br />
-            <asp:Button ID="singleoptionsubmit" runat="server" OnClick="singleoptionsubmit_Click" Text="Submit" Height="23px" Width="100px" ValidationGroup="singleoptionvalidation" />
+            </asp:DropDownList>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="ddlCategorias2" Display="Dynamic" ErrorMessage="Por favor ingrese la categoria" SetFocusOnError="true" ForeColor="Red" ValidationGroup="singleoptionvalidation" /><br /><br /><br />
+            <asp:Button ID="singleoptionsubmit" runat="server" OnClick="singleoptionsubmit_Click" Text="Submit" ValidationGroup="singleoptionvalidation" class="btn btn-default btn-lg" />
         </div>
         <br /><asp:Label ID="lblmessage" runat="server" ForeColor="#ff0000" Visible="false" /><br />
         <br />
